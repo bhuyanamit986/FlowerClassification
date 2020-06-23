@@ -47,5 +47,14 @@ To prevent the middle part of the network from “dying out”, the authors intr
 
 `total_loss = real_loss + 0.3 * aux_loss_1 + 0.3 * aux_loss_2`
 
+## Inception V2 (https://arxiv.org/pdf/1512.00567v3.pdf)
+
+Inception v2 and Inception v3 were presented in the same paper. The authors proposed a number of upgrades which increased the accuracy and reduced the computational complexity.
+
+### The Premise:
+
+ - Reduce representational bottleneck. The intuition was that, neural networks perform better when convolutions didn’t alter the dimensions of the input drastically. Reducing the dimensions too much may cause loss of information, known as a “representational bottleneck”
+ - Using smart factorization methods, convolutions can be made more efficient in terms of computational complexity.
+
 
 
