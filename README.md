@@ -43,9 +43,9 @@ GoogLeNet has 9 such inception modules stacked linearly. It is 22 layers deep (2
 Needless to say, it is a pretty deep classifier. As with any very deep network, it is subject to the vanishing gradient problem.
 To prevent the middle part of the network from “dying out”, the authors introduced two auxiliary classifiers (The purple boxes in the image). They essentially applied softmax to the outputs of two of the inception modules, and computed an auxiliary loss over the same labels. The total loss function is a weighted sum of the auxiliary loss and the real loss. Weight value used in the paper was 0.3 for each auxiliary loss.
 
-`# The total loss used by the inception net during training.
+`# The total loss used by the inception net during training.'
 
-total_loss = real_loss + 0.3 * aux_loss_1 + 0.3 * aux_loss_2`
+'total_loss = real_loss + 0.3 * aux_loss_1 + 0.3 * aux_loss_2`
 
 
 
