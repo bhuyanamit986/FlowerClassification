@@ -55,6 +55,16 @@ Inception v2 and Inception v3 were presented in the same paper. The authors prop
 
  - Reduce representational bottleneck. The intuition was that, neural networks perform better when convolutions didn’t alter the dimensions of the input drastically. Reducing the dimensions too much may cause loss of information, known as a “representational bottleneck”
  - Using smart factorization methods, convolutions can be made more efficient in terms of computational complexity.
+ 
+### The Solution:
+
+ - Factorize 5x5 convolution to two 3x3 convolution operations to improve computational speed. Although this may seem counterintuitive, a 5x5 convolution is 2.78 times more expensive than a 3x3 convolution. So stacking two 3x3 convolutions infact leads to a boost in performance. This is illustrated in the below image.
+ - The left-most 5x5 convolution of the old inception module, is now represented as two 3x3 convolutions. (Source: Incpetion v2)
+Moreover, they factorize convolutions of filter size nxn to a combination of 1xn and nx1 convolutions. For example, a 3x3 convolution is equivalent to first performing a 1x3 convolution, and then performing a 3x1 convolution on its output. They found this method to be 33% more cheaper than the single 3x3 convolution. This is illustrated in the below image.
+ - Here, put n=3 to obtain the equivalent of the previous image. The left-most 5x5 convolution can be represented as two 3x3 convolutions, which inturn are represented as 1x3 and 3x1 in series. (Source: Incpetion v2)
+The filter banks in the module were expanded (made wider instead of deeper) to remove the representational bottleneck. If the module was made deeper instead, there would be excessive reduction in dimensions, and hence loss of information. This is illustrated in the below image.
+ - Making the inception module wider. This type is equivalent to the module shown above. (Source: Incpetion v2)
+The above three principles were used to build three different types of inception modules (Let’s call them modules A,B and C in the order they were introduced. 
 
 
 
