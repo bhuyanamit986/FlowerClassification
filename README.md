@@ -91,8 +91,8 @@ The Solution
 **Note: I have used inception v3 as my model.**
 
 ## Model Accuracy
-`Train Accuracy: 100%`
-`Test Accuracy: 95.99%`
+ - `Train Accuracy: 100%`
+ - `Test Accuracy: 95.99%`
 
 
 
