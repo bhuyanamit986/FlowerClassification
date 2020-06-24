@@ -63,7 +63,7 @@ Inception v2 and Inception v3 were presented in the same paper. The authors prop
  - The filter banks in the module were expanded (made wider instead of deeper) to remove the representational bottleneck. If the module was made deeper instead, there would be excessive reduction in dimensions, and hence loss of information. https://miro.medium.com/max/1150/1*DVXTxBwe_KUvpEs3ZXXFbg.png
  - The above three principles were used to build three different types of inception modules (Let’s call them modules A,B and C in the order they were introduced. 
 
-## Inception V3:
+## Inception V3
 
 ### The Premise:
 
@@ -73,8 +73,23 @@ Inception v2 and Inception v3 were presented in the same paper. The authors prop
 ### The Solution
 
 Inception Net v3 incorporated all of the above upgrades stated for Inception v2, and in addition used the following:
-RMSProp Optimizer.
-Factorized 7x7 convolutions.
-BatchNorm in the Auxillary Classifiers.
-Label Smoothing (A type of regularizing component added to the loss formula that prevents the network from becoming too confident about a class. Prevents over fitting).
+ - RMSProp Optimizer.
+ - Factorized 7x7 convolutions.
+ - BatchNorm in the Auxillary Classifiers.
+ - Label Smoothing (A type of regularizing component added to the loss formula that prevents the network from becoming too confident about a class. Prevents over fitting).
+ 
+## Inception V4 (Inception v4 and Inception-ResNet were introduced in the same paper. https://arxiv.org/pdf/1602.07261.pdf)
+
+### The Premise:
+
+ - Make the modules more uniform. The authors also noticed that some of the modules were more complicated than necessary. This can enable us to boost performance by adding more of these uniform modules.
+The Solution
+ - The “stem” of Inception v4 was modified. The stem here, refers to the initial set of operations performed before introducing the Inception blocks. https://miro.medium.com/max/1292/1*cYjhQ05zLXdHn363TsPrLQ.jpeg
+ - They had three main inception modules, named A,B and C (Unlike Inception v2, these modules are infact named A,B and C). They look very similar to their Inception v2 (or v3) counterparts. https://miro.medium.com/max/1400/1*KrBAIZjcrlXu6JPiPQj2vQ.jpeg
+ - Inception v4 introduced specialized “Reduction Blocks” which are used to change the width and height of the grid. The earlier versions didn’t explicitly have reduction blocks, but the functionality was implemented. https://miro.medium.com/max/1400/1*2Hdo2wG3ILUoYaorJdlR-Q.jpeg
+
+**Note: I have used inception v3 as my model.
+
+
+
 
