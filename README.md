@@ -88,7 +88,7 @@ The Solution
  - They had three main inception modules, named A,B and C (Unlike Inception v2, these modules are infact named A,B and C). They look very similar to their Inception v2 (or v3) counterparts. https://miro.medium.com/max/1400/1*KrBAIZjcrlXu6JPiPQj2vQ.jpeg
  - Inception v4 introduced specialized “Reduction Blocks” which are used to change the width and height of the grid. The earlier versions didn’t explicitly have reduction blocks, but the functionality was implemented. https://miro.medium.com/max/1400/1*2Hdo2wG3ILUoYaorJdlR-Q.jpeg
 
-**Note: I have used inception v3 as my model.
+**Note: I have used inception v3 as my model.**
 
 
 
